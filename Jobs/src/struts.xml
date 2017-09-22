@@ -4,11 +4,12 @@
 	"http://struts.apache.org/dtds/struts-2.0.dtd">
 	
 <struts>
-	<package name="default" extends="struts-default">
+	<!-- namespace="/listJobs" -->
+	<package name="default"  extends="struts-default">
 		<action name="doLogin" class="org.Actions.LoginAction">
-			<result name="register">/Register.jsp</result>
+			<!-- <result name="register">/Register.jsp</result> -->
 			<result name="failure">/Error.jsp</result>
-			<result name="login">/Login.jsp</result>
+			<result name="success">/Jobs.jsp</result>
 		</action>
 	
 	
