@@ -1,0 +1,38 @@
+@charset "ISO-8859-1";
+
+body {
+	background: #24202f;
+}
+#login_page {
+	margin: 50px auto;
+    width: 320px;
+}
+
+.LoginForm {
+	margin: auto;
+    width: 100%;
+    border-radius: 5px;
+    background: #282e33;
+    border-top: 3px solid #434a52;
+    border-bottom: 3px solid #434a52;
+    padding: 22px 22px 22px 22px;
+}
+
+#LoginUser {
+	width: 250px;
+	background: #3b4148;
+	padding: 10px 10px 10px 10px;
+}
+
+#LoginPass  {
+	width: 250px;
+	background: #3b4148;
+	padding: 10px 10px 10px 10px;
+}
+
+#LoginSubmitBtn  {
+	width: 250px;
+	padding: 10px 10px 10px 10px;
+}
+
+

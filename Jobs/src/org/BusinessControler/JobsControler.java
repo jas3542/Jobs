@@ -5,7 +5,9 @@ import org.Interfaces.JobsControlerI;
 public class JobsControler implements JobsControlerI {
 
 	public String getJobs() {
-		return "Controler Works";
+		
+		//call DB and get data
+		return "Jobs Controler Works";
 		
 	}
 }
