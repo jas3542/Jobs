@@ -1,4 +1,4 @@
-package org.Hello;
+package org.Model;
 
 public class Login {
 

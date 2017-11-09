@@ -1,24 +1,35 @@
 package org.Actions;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.BusinessControler.LoginControler;
 import org.Interfaces.LoginControlerI;
+import org.apache.struts2.ServletActionContext;
 
-public class LoginAction {
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
 
+public class LoginAction extends ActionSupport{
+	
+	private static final long serialVersionUID = 2893691601678276632L;
+	
 	private String returnData;
 	// getting parameters from the jsp.
 	private String parameterUser;
 	private String parameterPassword;
 	
 	public String execute() {
-
-		System.out.println(parameterUser);
 		
 		LoginControlerI loginI = new LoginControler();
+		returnData = loginI.doLogin(getParameterUser(),getParameterPassword());
 		
-		setReturnData(loginI.doLogin(getParameterUser(),getParameterPassword()));
-				
-		return "success";
+		if (getParameterUser().equals("jas")) {
+			addActionError("Invlaid Login Information!");
+		}
+		
+		System.out.println(returnData);
+		return returnData;
+		
 		
 	}
 
@@ -45,6 +56,5 @@ public class LoginAction {
 	public void setParameterPassword(String parameterPassword) {
 		this.parameterPassword = parameterPassword;
 	}
-	
 	
 }

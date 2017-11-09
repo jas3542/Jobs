@@ -8,7 +8,7 @@
 	<package name="default"  extends="struts-default">
 		<action name="doLogin" class="org.Actions.LoginAction">
 			<!-- <result name="register">/Register.jsp</result> -->
-			<result name="failure">/Error.jsp</result>
+			<result name="fail">/Login.jsp</result>
 			<result name="success">/Jobs.jsp</result>
 		</action>
 	
