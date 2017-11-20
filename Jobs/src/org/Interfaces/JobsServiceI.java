@@ -1,6 +1,6 @@
 package org.Interfaces;
 
-public interface JobsControlerI {
+public interface JobsServiceI {
 
 	public String getJobs();
 }

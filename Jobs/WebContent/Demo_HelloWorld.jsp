@@ -69,7 +69,7 @@
 	
 	<!-- Mysql driver imported with Maven. -->
 	<div><<--Mysql Connection-->></div>
-	<%@ page import="org.Hello.Connector" %>
+	<%@ page import="org.Utilities.DBConnection" %>
 	<div>
 		<%
 			//if(!Connector.getConnection().isClosed()) {

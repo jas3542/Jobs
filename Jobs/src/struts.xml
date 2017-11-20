@@ -2,17 +2,38 @@
 <!DOCTYPE struts PUBLIC 
 	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
 	"http://struts.apache.org/dtds/struts-2.0.dtd">
-	
+
 <struts>
 	<!-- namespace="/listJobs" -->
-	<package name="default"  extends="struts-default">
+	<package name="default" extends="struts-default">
+
+		<!-- Costum Intercepter -->
+		<interceptors>
+			<interceptor class="org.Intercepters.LoginInterceptor"
+				name="loginInterceptor" />
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="loginInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="loginStack" />
+
+
+
+
 		<action name="doLogin" class="org.Actions.LoginAction">
 			<!-- <result name="register">/Register.jsp</result> -->
 			<result name="fail">/Login.jsp</result>
 			<result name="success">/Jobs.jsp</result>
 		</action>
-	
-	
+
+		<action name="doRegister" class="org.Actions.RegisterAction">
+			<result name="fail">/Login.jsp</result>
+			<result name="success">/Loginn.jsp</result>
+		</action>
+
+
 	</package>
 
 

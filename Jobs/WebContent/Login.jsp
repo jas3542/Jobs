@@ -35,6 +35,12 @@
 			<tags:submit id="loginSubmitBtn" type="submit" value="Submit!"></tags:submit>
 
 		</tags:form>
+		<div id="register_Page">
+			<a href="Register.jsp">Sign up</a>
+		</div>
+		<div id="resetPassword_Page">
+			<a href="ResetPassword.jsp">Reset Password</a>
+		</div>
 
 	</div>
 </body>

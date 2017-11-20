@@ -1,13 +1,13 @@
-package org.BusinessControler;
+package org.BusinessService;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import org.Interfaces.LoginControlerI;
+import org.Interfaces.LoginServiceI;
 import org.Utilities.DBConnection;
 
-public class LoginControler implements LoginControlerI {
+public class LoginService implements LoginServiceI {
 	// here i do the query to the DB and after that i return ok or fail.
 	@Override
 	public String doLogin(String usernamee, String passwordd) {
@@ -16,6 +16,7 @@ public class LoginControler implements LoginControlerI {
 
 		// Use DAO or Hibernate Criteria.
 
+		/*
 		String query = "";
 		try {
 
@@ -25,7 +26,7 @@ public class LoginControler implements LoginControlerI {
 		} catch (SQLException e) {
 			throw new RuntimeException("SQL Exception", e);
 		}
-
-		return "fail";
+		 */
+		return "success";
 	}
 }
