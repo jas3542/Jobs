@@ -1,2 +1,2 @@
 # Jobs
-Creating a Job searching webapp using Struts2. I'll do webscraping.
+Creating a Job searching webapp using Struts2, Hibernate (TODO), BootStrap 4 (TODO)
