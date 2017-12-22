@@ -6,7 +6,7 @@ body {
 
 #login_page {
 	margin: 50px auto;
-    width: 100%;
+	width: 100%;
 }
 
 #error {
@@ -16,23 +16,24 @@ body {
 	margin: auto;
 	width: 320px;
 }
+
 #error li {
 	width: 100%;
 	height: 20px;
 	background-color: red;
 	margin: auto;
 	width: 320px;
-	list-style: none; 
+	list-style: none;
 }
 
 #loginForm {
 	margin: auto;
-    width: 320px;
-    border-radius: 5px;
-    background: #282e33;
-    border-top: 3px solid #434a52;
-    border-bottom: 3px solid #434a52;
-    padding: 22px 22px 22px 22px;
+	width: 320px;
+	border-radius: 5px;
+	background: #282e33;
+	border-top: 3px solid #434a52;
+	border-bottom: 3px solid #434a52;
+	padding: 22px 22px 22px 22px;
 }
 
 #loginUser {
@@ -41,24 +42,31 @@ body {
 	padding: 10px 10px 10px 10px;
 }
 
-#loginPass  {
+#loginPass {
 	width: 300px;
 	background: #3b4148;
 	padding: 10px 10px 10px 10px;
 }
 
-#loginSubmitBtn  {
+#loginSubmitBtn {
 	width: 310px;
 	padding: 10px 10px 10px 10px;
 }
 
-#register_Page a {
+#loginOptionalPage {
+	border-radius: 5px;
+	background-color: #282e33;
+	padding: 10px 20px 10px 20px;
+	width: 320px;
 	margin: auto;
-    width: 320px;
-    border-radius: 5px;
-    background: #282e33;
-    border-top: 3px solid #434a52;
-    border-bottom: 3px solid #434a52;
-    padding: 22px 22px 22px 22px;
 }
 
+#registerPage {
+	border-color: yellow;
+	border: solid;
+}
+
+#resetPage {
+	border-color: red;
+	border: solid;
+}

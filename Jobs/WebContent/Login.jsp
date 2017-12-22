@@ -26,20 +26,20 @@
 				<tags:actionerror />
 			</div>
 		</tags:if>
+		
 		<!-- with struts tags. -->
 		<tags:form id="loginForm" action="doLogin">
-			<tags:textfield id="loginUser" name="parameterUser" type="text"
+			<tags:textfield id="loginUser" name="user.parameterUser" type="text"
 				placeholder="User"></tags:textfield>
-			<tags:textfield id="loginPass" name="parameterPassword"
+			<tags:textfield id="loginPass" name="user.parameterPassword"
 				type="password" placeholder="Password"></tags:textfield>
 			<tags:submit id="loginSubmitBtn" type="submit" value="Submit!"></tags:submit>
 
 		</tags:form>
-		<div id="register_Page">
-			<a href="Register.jsp">Sign up</a>
-		</div>
-		<div id="resetPassword_Page">
-			<a href="ResetPassword.jsp">Reset Password</a>
+		
+		<div id="loginOptionalPage">
+			<a id="registerPage" href="Register.jsp">Sign up</a>
+			<a id="resetPage" href="ResetPassword.jsp">Reset Password</a>
 		</div>
 
 	</div>

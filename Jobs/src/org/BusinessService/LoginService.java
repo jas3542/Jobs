@@ -8,7 +8,9 @@ import org.Interfaces.LoginServiceI;
 import org.Utilities.DBConnection;
 
 public class LoginService implements LoginServiceI {
-	// here i do the query to the DB and after that i return ok or fail.
+	/**
+	 *  Here i do the query to the DB and after that i return ok or fail.
+	 */
 	@Override
 	public String doLogin(String usernamee, String passwordd) {
 		// do query.
@@ -27,6 +29,7 @@ public class LoginService implements LoginServiceI {
 			throw new RuntimeException("SQL Exception", e);
 		}
 		 */
+		
 		return "success";
 	}
 }

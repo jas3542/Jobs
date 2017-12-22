@@ -4,6 +4,8 @@ import org.BusinessService.JobsService;
 import org.BusinessService.LoginService;
 import org.Interfaces.JobsServiceI;
 import org.Interfaces.LoginServiceI;
+import org.Model.User;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;
 
@@ -17,18 +19,21 @@ public class LoginAction extends ActionSupport{
 	private String parameterUser;
 	private String parameterPassword;
 	
+	private User user;
+	
+	
 	public String execute() {
 		
 		LoginServiceI loginI = new LoginService();
-		returnData = loginI.doLogin(getParameterUser(),getParameterPassword());
+		returnData = loginI.doLogin(getUser().getParameterUser(),getUser().getParameterPassword());
 		
 		// if fail returned
-		if (getParameterUser().equals("error")) {
+		if (getUser().getParameterUser().equals("error")) {
 			addActionError("Invalid Login Information!");
 		}
 		
 		// TODO 1-create session cookie
-		// TODO 2-call getJobs()
+		// TODO 2-call getJobs() and show them in the jsp JOBS.
 		JobsServiceI jobsI = new JobsService();
 		result = jobsI.getJobs();
 		
@@ -36,6 +41,16 @@ public class LoginAction extends ActionSupport{
 		
 		
 	}
+
+	public User getUser() {
+		return user;
+	}
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 
 	public String getReturnData() {
 		return returnData;
